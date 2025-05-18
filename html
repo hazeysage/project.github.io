@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horrors of Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #e53e3e;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* Header */
+    header {
+      background: #1a1a1a;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #333;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #e53e3e;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav li {
+      margin-left: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero .hero-content {
+      position: relative;
+      color: #fff;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #e53e3e;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Posts Grid */
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .post-card {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .post-card .content {
+      padding: 1rem;
+    }
+    .post-card h3 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .post-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      padding: 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 1px solid #333;
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Horrors of Life</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Embrace the Darkness</h1>
+      <p>Dive into tales of despair, dread, and the uncanny truths lurking beneath our reality.</p>
+      <a href="#posts" class="btn">Explore Posts</a>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section id="posts" class="container">
+    <h2>Latest Chronicles</h2>
+    <div class="posts">
+      <!-- Example Post Card -->
+      <div class="post-card">
+        <img src="post1.jpg" alt="Post 1">
+        <div class="content">
+          <h3>The Unseen Observer</h3>
+          <p>When the shadows watch back, what remains of sanity?</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- Repeat .post-card for more posts -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About the Author</h2>
+    <p>I'm a seeker of truths too dark for daylight. Through this blog, I share my experiences and reflections on the macabre facets of existence.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Horrors of Life. All rights reserved.</p>
+  </footer>
+</body>
+</html>
